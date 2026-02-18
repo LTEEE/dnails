@@ -273,8 +273,8 @@ em {
   width: fit-content;
   max-width: 95%;
   z-index: 1000;
-  padding: 4px;
-  /* Reduced to hug the links accurately */
+  padding: 8px;
+  /* Balanced container padding */
   background: rgba(26, 18, 16, 0.08);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
@@ -286,26 +286,21 @@ em {
 
 .nav.scrolled {
   top: 54px;
-  /* Move slightly down to clear announcement bar */
   background: rgba(255, 255, 255, 0.85);
   border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  padding: 8px 0;
 }
 
 .nav__inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
 }
 
-/* Nav links */
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 8px;
-  /* Closer gap for tighter pill look */
+  gap: 2px;
+  /* Super tight gap */
 }
 
 .nav__links a {
@@ -316,24 +311,24 @@ em {
   color: rgba(255, 255, 255, 0.9);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
-  padding: 14px 24px;
-  /* Consistent padding for vertical/horizontal symmetry */
+  padding: 12px 22px;
+  /* Symmetrical internal padding */
   border-radius: 999px;
   display: block;
+  text-decoration: none !important;
+  border: none !important;
+  outline: none !important;
 }
 
 .nav__links a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   color: #fff;
 }
 
-/* Liquid Glass Click Effect */
 .nav__links a:active {
-  transform: scale(0.92);
-  background: rgba(255, 255, 255, 0.15);
+  transform: scale(0.94);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: transform 0.1s ease;
 }
 
 .nav.scrolled .nav__links a {
