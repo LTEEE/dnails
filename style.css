@@ -273,9 +273,9 @@ em {
   width: fit-content;
   max-width: 95%;
   z-index: 1000;
-  padding: 6px 10px;
+  padding: 4px;
+  /* Reduced to hug the links accurately */
   background: rgba(26, 18, 16, 0.08);
-  /* Slightly darker for better visibility */
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -297,7 +297,6 @@ em {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
   width: auto;
 }
 
@@ -305,24 +304,26 @@ em {
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 8px;
+  /* Closer gap for tighter pill look */
 }
 
 .nav__links a {
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  line-height: 1;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
   white-space: nowrap;
-  padding: 12px 20px;
+  padding: 14px 24px;
+  /* Consistent padding for vertical/horizontal symmetry */
   border-radius: 999px;
   display: block;
 }
 
 .nav__links a:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 
@@ -335,46 +336,17 @@ em {
   transition: transform 0.1s ease;
 }
 
-.nav__links a::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: #E8B49A;
-  transition: width 0.25s;
-}
-
-.nav__links a:hover::after {
-  width: 100%;
-}
-
-.nav__links a:hover {
-  color: #E8B49A;
-}
-
 .nav.scrolled .nav__links a {
-  color: #2A1E1C !important;
+  color: var(--text-deep) !important;
 }
 
 .nav.scrolled .nav__links a:hover {
-  color: #C9896B !important;
-}
-
-.nav.scrolled .nav__links a::after {
-  background: #C9896B;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--accent-rose) !important;
 }
 
 .nav.scrolled .nav__toggle span {
-  background: #2A1E1C !important;
-}
-
-/* CTA button */
-.nav__cta {
-  padding: 10px 22px;
-  font-size: 0.76rem;
-  flex-shrink: 0;
+  background: var(--text-deep);
 }
 
 /* Mobile toggle */
@@ -385,9 +357,11 @@ em {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 6px;
+  padding: 10px;
   position: absolute;
-  right: 20px;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .nav__toggle span {
@@ -417,15 +391,13 @@ em {
 
   .nav__inner {
     justify-content: center;
-    padding: 0 16px;
+    padding: 0 12px;
     position: relative;
+    height: 50px;
   }
 
   .nav__toggle {
     display: flex;
-    position: absolute;
-    right: 16px;
-    /* Position absolute to keep it out of center flow */
   }
 
   .nav__cta {
