@@ -46,8 +46,6 @@ body {
   background-color: var(--bg-beige);
 }
 
-
-
 img {
   display: block;
   max-width: 100%;
@@ -66,8 +64,6 @@ ul {
 address {
   font-style: normal;
 }
-
-
 
 /* ─── Typography ───────────────────────────── */
 h1,
@@ -150,8 +146,6 @@ em {
   background: var(--accent-rose);
   color: #fff;
 }
-
-
 
 /* ─── Container ────────────────────────────── */
 .container {
@@ -687,8 +681,6 @@ em {
     padding: 120px 24px 80px;
   }
 
-
-
   .hero__stats {
     flex-wrap: wrap;
     row-gap: 24px;
@@ -710,7 +702,6 @@ em {
 }
 
 @media (max-width: 480px) {
-
 
   .hero__stat-divider {
     margin: 0 12px;
@@ -1011,7 +1002,6 @@ em {
     /* Hide accent images on very small phones to save space */
   }
 }
-
 
 .about__badge {
   position: absolute;
@@ -1364,163 +1354,6 @@ em {
   .booking-cta {
     padding: 80px 20px;
   }
-}
-
-/* ─── Social Media Tabs & Panels ─────────────── */
-.social-tabs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 36px;
-  flex-wrap: wrap;
-}
-
-.social-tab {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 28px;
-  border-radius: 2px;
-  border: 1.5px solid var(--accent-blush);
-  background: transparent;
-  color: var(--accent-rose);
-  font-family: 'Jost', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.social-tab:hover {
-  background: rgba(201, 137, 107, 0.08);
-  border-color: var(--accent-rose);
-  transform: translateY(-1px);
-}
-
-.social-tab.active {
-  background: var(--accent-rose);
-  border-color: var(--accent-rose);
-  color: #fff;
-}
-
-.social-panel-wrap {
-  position: relative;
-}
-
-.social-panel {
-  display: none;
-  animation: panel-in 0.4s ease both;
-}
-
-.social-panel.active {
-  display: block;
-}
-
-@keyframes panel-in {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.social-panel__main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: start;
-  background: var(--bg-card);
-  border-radius: 6px;
-  padding: 48px 48px;
-  box-shadow: 0 8px 48px rgba(42, 30, 28, 0.06);
-}
-
-@media (max-width: 900px) {
-  .social-panel__main {
-    grid-template-columns: 1fr;
-    padding: 32px 24px;
-    gap: 32px;
-  }
-}
-
-.social-panel__embed {
-  width: 100%;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Override embed widget defaults */
-.social-panel__embed .tiktok-embed,
-.social-panel__embed .instagram-media,
-.social-panel__embed .text-post-media {
-  max-width: 100%;
-  min-width: 0;
-  width: 100%;
-  margin: 0;
-}
-
-.social-panel__info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 8px;
-}
-
-.social-panel__platform-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--bg-beige);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-rose);
-  flex-shrink: 0;
-}
-
-.social-panel__info h3 {
-  font-size: 1.8rem;
-  color: var(--text-deep);
-}
-
-.social-panel__info p {
-  font-size: 0.97rem;
-  color: #5a4540;
-  line-height: 1.75;
-}
-
-.social-panel__stats {
-  display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.social-panel__stat {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.social-panel__stat span {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  color: var(--accent-rose);
-  line-height: 1;
-}
-
-.social-panel__stat small {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
 }
 
 /* ─── Contact ────────────────────────────────── */

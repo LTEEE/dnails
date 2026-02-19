@@ -106,14 +106,6 @@ const updateParallax = () => {
 };
 window.addEventListener('scroll', updateParallax, { passive: true });
 
-// ─── Tab Switcher ─────────────────────────────
-document.querySelectorAll('.social-tab').forEach(tab => {
-  tab.addEventListener('click', () => {
-    document.querySelectorAll('.social-tab, .social-panel').forEach(el => el.classList.remove('active'));
-    tab.classList.add('active');
-    document.getElementById('panel-' + tab.dataset.tab)?.classList.add('active');
-  });
-});
 
 // ─── Gallery Hover ────────────────────────────
 document.querySelectorAll('.gallery-item').forEach(item => {
